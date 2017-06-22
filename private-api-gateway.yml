@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://public-registry-service:8761/eureka/
+      privateZone: http://private-registry-service:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  sensitive-headers: Cookie,Set-Cookie
+  routes:
+   account-service: /account/**
+   auth-service: /auth/**
+   inventory-service: /inventory/**

@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      fail-fast: true
+
+debug: true
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
