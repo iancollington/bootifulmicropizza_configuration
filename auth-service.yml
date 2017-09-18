@@ -1,0 +1,9 @@
+server:
+  port: 9999
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://private-registry-service:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
